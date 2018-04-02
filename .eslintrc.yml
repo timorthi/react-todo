@@ -1,0 +1,6 @@
+extends:
+  - google
+  - eslint:recommended
+  - plugin:react/recommended
+
+parser: babel-eslint
