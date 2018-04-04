@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Form, Button, Input } from 'semantic-ui-react';
+import { Container, Button, Input } from 'semantic-ui-react';
 
 export default class TodoInput extends Component {
     render() {
