@@ -6,23 +6,25 @@ export default class TodoInput extends Component {
     constructor(props) {
         super(props);
         this.state = { value: "" };
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.setParentState = this.setParentState.bind(this);
     }
 
-    setParentState() {
+    setParentState = () => {
         this.props.onSubmit(this.state.value);
         this.setState({ value: "" });
-    }
+    };
 
-    handleInputChange(e) {
+    handleInputChange = (e) => {
         this.setState({ value: e.target.value });
-    }
+    };
 
     render() {
         return (
             <Container>
-                <Input value={this.state.value} onChange={this.handleInputChange} placeholder="Enter something to do..." />
+                <Input
+                    value={this.state.value}
+                    onChange={this.handleInputChange}
+                    placeholder="Enter something to do..."
+                />
                 <Button onClick={this.setParentState}>
                     Add
                 </Button>

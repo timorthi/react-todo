@@ -7,14 +7,13 @@ export default class TodoList extends Component {
     constructor(props) {
         super(props);
         this.state = { items: [] };
-        this.addItem = this.addItem.bind(this);
     }
 
-    addItem(item) {
+    addItem = (item) => {
         var items = this.state.items;
         items.push(item);
-        this.setState({items: items});
-    }
+        this.setState({ items: items });
+    };
 
     render() {
         return (
