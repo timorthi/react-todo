@@ -17,9 +17,9 @@ export default class TodoList extends Component {
 
     render() {
         return (
-            <Container as="div">
+            <Container as="div" textAlign="center">
                 <TodoInput onSubmit={this.addItem} />
-                <TodoItems />
+                <TodoItems items={this.state.items} />
             </Container>
         );
     }
