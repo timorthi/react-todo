@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
+import { Container, List } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
+import TodoItem from '../components/TodoItem';
 
 export default class TodoItems extends Component {
     render() {
         return (
-            "Items"
+            <Container>
+                <List>
+                    { this.props.items.map((item) => { return <TodoItem item={item} />; }) }
+                </List>
+            </Container>
         );
     }
+}
+
+TodoItems.propTypes = {
+    items: PropTypes.array.isRequired
 }
