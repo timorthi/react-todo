@@ -5,7 +5,7 @@ import { List } from 'semantic-ui-react';
 export default class TodoItem extends Component {
     render() {
         return (
-            <List.Item key={this.props.item}>
+            <List.Item>
                 {this.props.item}
             </List.Item>
         );
@@ -13,5 +13,5 @@ export default class TodoItem extends Component {
 }
 
 TodoItem.propTypes = {
-    items: PropTypes.string.isRequired
+    item: PropTypes.string.isRequired
 }
