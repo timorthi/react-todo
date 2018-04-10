@@ -8,7 +8,7 @@ export default class TodoItems extends Component {
         return (
             <Container>
                 <List>
-                    { this.props.items.map((item) => { return <TodoItem item={item} />; }) }
+                    { this.props.items.map((item) => { return <TodoItem key={item} item={item} />; }) }
                 </List>
             </Container>
         );
