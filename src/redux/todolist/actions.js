@@ -1,9 +1,7 @@
 // Action types
-const ADD_TODO = 'ADD_TODO'
+export const ADD_TODO = 'ADD_TODO';
 
 // Action creators
-function addTodo(text) {
+export function addTodo(text) {
     return { type: ADD_TODO, text: text }
 }
-
-export { addTodo };
