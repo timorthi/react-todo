@@ -5,7 +5,13 @@ const initialState = { todos: [] };
 export default function todosReducer(state = initialState, action) {
     switch(action.type) {
         case ADD_TODO:
-            return [ ...state.todos, action.text ];
+            return {
+                ...state,
+                todos: [
+                  ...state.todos,
+                  action.text
+                ]
+            };
         default:
             return state;
     }
