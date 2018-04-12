@@ -29,7 +29,7 @@ TodoList.propTypes = {
 }
 
 const mapStateToProps = (state) => ({
-    todos: state.todosReducer.todos
+    todos: state.todolist.todos
 });
 
 const mapDispatchToProps = (dispatch) => ({
