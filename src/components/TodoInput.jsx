@@ -8,7 +8,7 @@ export default class TodoInput extends Component {
         this.state = { value: "" };
     }
 
-    setParentState = () => {
+    handleSubmit = () => {
         this.props.onSubmit(this.state.value);
         this.setState({ value: "" });
     };
@@ -21,11 +21,10 @@ export default class TodoInput extends Component {
         return (
             <Container>
                 <Input
-                    value={this.state.value}
-                    onChange={this.handleInputChange}
-                    placeholder="Enter something to do..."
-                />
-                <Button onClick={this.setParentState}>
+                 value={this.state.value}
+                 onChange={this.handleInputChange}
+                 placeholder="Enter something to do..."/>
+                <Button onClick={this.handleSubmit}>
                     Add
                 </Button>
             </Container>
