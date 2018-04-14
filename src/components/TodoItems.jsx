@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, List } from 'semantic-ui-react';
+import { List } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import TodoItem from '../components/TodoItem';
 
