@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import { Container } from 'semantic-ui-react';
 
 import './App.css';
 import TodoList from './TodoList';
@@ -19,7 +20,9 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <TodoList />
+        <Container>
+          <TodoList />
+        </Container>
       </Provider>
     );
   }
