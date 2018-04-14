@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 import TodoInput from '../components/TodoInput';
@@ -15,10 +15,14 @@ class TodoList extends Component {
 
     render() {
         return (
-            <Container as="div" textAlign="center">
-                <TodoInput onSubmit={this.handleOnSubmit} />
-                <TodoItems items={this.props.todos} />
-            </Container>
+            <Grid>
+                <Grid.Row>
+                    <TodoInput onSubmit={this.handleOnSubmit} />
+                </Grid.Row>
+                <Grid.Row>
+                    <TodoItems items={this.props.todos} />
+                </Grid.Row>
+            </Grid>
         );
     }
 }

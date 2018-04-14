@@ -6,17 +6,15 @@ import TodoItem from '../components/TodoItem';
 export default class TodoItems extends Component {
     render() {
         return (
-            <Container>
-                <List>
-                    {
-                        this.props.items.map((item) => {
-                            return <TodoItem
-                                    key={item}
-                                    item={item} />;
-                        })
-                    }
-                </List>
-            </Container>
+            <List>
+                {
+                    this.props.items.map((item) => {
+                        return <TodoItem
+                                key={item}
+                                item={item} />;
+                    })
+                }
+            </List>
         );
     }
 }

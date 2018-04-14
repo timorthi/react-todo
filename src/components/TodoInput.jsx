@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Button, Input } from 'semantic-ui-react';
+import { Grid, Button, Input } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 export default class TodoInput extends Component {
@@ -19,15 +19,17 @@ export default class TodoInput extends Component {
 
     render() {
         return (
-            <Container>
-                <Input
-                 value={this.state.value}
-                 onChange={this.handleInputChange}
-                 placeholder="Enter something to do..."/>
-                <Button onClick={this.handleSubmit}>
-                    Add
-                </Button>
-            </Container>
+            <Grid>
+                <Grid.Row>
+                    <Input
+                        value={this.state.value}
+                        onChange={this.handleInputChange}
+                        placeholder="Enter something to do..."/>
+                    <Button onClick={this.handleSubmit}>
+                        Add
+                    </Button>
+                </Grid.Row>
+            </Grid>
         );
     }
 }
